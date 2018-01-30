@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="logo-wrap">
+    <div class="bars">
+      <img src="assets/img/bars.png" />
+    </div>
+    <div class="logo">
+      <img src="assets/img/logo.png" />
+    </div>
+  </div>
+  <div class="button-box">
+    <div class="box-wrap">
+      <p class="box-title">
+        <img src="assets/img/signin.svg" />sign up as</p>
+      <ion-grid>
+        <ion-row class="mb-10">
+          <ion-col text-center margin-horizontal>
+            <button ion-button class="btn main-btn" (tap)="marketer()">ADVERTISER</button>
+          </ion-col>
+        </ion-row>
+        <ion-row class="mb-20">
+          <ion-col text-center margin-horizontal>
+            <button ion-button class="btn round-btn" (tap)="influencer()">INFLUENCER</button>
+          </ion-col>
+        </ion-row>
+
+        <p text-center class="link" (tap)="loginchoice()">Already have an account?
+          <span class="red">Log In</span>
+        </p>
+
+      </ion-grid>
+    </div>
+  </div>
+
+</ion-content>

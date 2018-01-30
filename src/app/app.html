@@ -1,0 +1,52 @@
+<ion-menu persistent="true" [content]="content">
+  <div class="sidebar-bg"></div>
+  <ion-header class="sidebar">
+    <div text-center class="profile-wrap">
+
+
+      <div class="img-box">
+        <div class="icon-wrap" menuClose (tap)="message()">
+          <img name="cog" src="assets/img/chat.svg" />
+        </div>
+        <div class="profilepic-wrap">
+          <ion-avatar class="person-pic">
+            <img src="assets/img/profile-pic.jpg" alt="avatar">
+          </ion-avatar>
+        </div>
+        <div class="icon-wrap" menuClose (tap)="marketerProfileEdit()">
+          <img name="cog" src="assets/img/edit.svg" />
+        </div>
+      </div>
+      <h4 text-center (click)="openPageprofile()">Michael Emerson</h4>
+
+
+
+    </div>
+  </ion-header>
+
+
+  <ion-content class="menu-wrap">
+
+    <!-- Side Menu -->
+    <!--  <side-menu-content margin-vertical class="menu-wrap" [accordionMode]="true" [options]="options" (selectOption)="selectOption($event)"></side-menu-content>
+-->
+
+    <ion-list class="menus">
+      <!--  <button menuClose [class.active]="active" ion-item *ngFor="let p of pages" (click)="openPage(p)">
+
+       
+        <span class="menu-name">{{p.title}}</span>
+      </button> -->
+
+      <button menuClose [class.active]="active" ion-item *ngFor="let i of influencer" (click)="openPage(i)">
+
+
+        <span class="menu-name">{{i.title}}</span>
+      </button>
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

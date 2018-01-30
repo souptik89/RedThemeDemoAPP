@@ -1,0 +1,45 @@
+<ion-content>
+  <div class="logo-wrap">
+    <div class="bars">
+      <img src="assets/img/bars.png" />
+    </div>
+    <div class="logo">
+      <img src="assets/img/logo.png" />
+    </div>
+  </div>
+  <div class="button-box">
+    <div class="box-wrap">
+      <p class="box-title">
+        <img src="assets/img/login-advertiset.png" />LOGIN AS ADVERTISER</p>
+
+
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-row class="mb-10">
+        <ion-col col-6 offset-6>
+          <p class="forgot_pass" (tap)="forgotpassword()">Forgot Password</p>
+        </ion-col>
+
+      </ion-row>
+
+
+      <ion-row class="mb-10">
+        <ion-col text-center margin-horizontal>
+          <button ion-button class="btn main-btn" (tap)="searchinfluencer()">Login</button>
+        </ion-col>
+      </ion-row>
+
+    </div>
+  </div>
+
+</ion-content>

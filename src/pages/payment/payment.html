@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+
+
+    <ion-title>Payment</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="top_block">
+    <ion-row>
+      <ion-col col-4>
+        <ion-avatar item-start>
+          <img src="assets/img/influ-pic.jpg" />
+        </ion-avatar>
+        <h2>Michael</h2>
+      </ion-col>
+      <ion-col col-3 class="right_arrow">
+        <img name="cog" src="assets/img/right-arrow.svg" />
+      </ion-col>
+      <ion-col col-4>
+        <ion-avatar item-start>
+          <img src="assets/img/influ-pic.jpg" />
+        </ion-avatar>
+        <h2>David</h2>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="button-box">
+    <div class="box-wrap">
+      <p class="box-heading"> Required Payment $85</p>
+      <h6>
+        <label>Escrowed</label> ID: 45756288187</h6>
+
+      <ion-grid>
+        <ion-row class="mb-10">
+          <ion-col text-center margin-horizontal>
+            <button ion-button class="btn main-btn instagram_login" (tap)="options()">PAY</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+</ion-content>

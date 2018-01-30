@@ -1,0 +1,8 @@
+{
+  "name": "InfluencerApp",
+  "app_id": "2c515adf",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

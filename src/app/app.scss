@@ -1,0 +1,472 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import '../theme/animations';
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('../assets/fonts/quicksand-regular-webfont.woff2') format('woff2'), url('../assets/fonts/quicksand-regular-webfont.woff') format('woff'), url('../assets/fonts/quicksand-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'quicksandlight';
+    src: url('../assets/fonts/quicksand-light-webfont.woff2') format('woff2'), url('../assets/fonts/quicksand-light-webfont.woff') format('woff'), url('../assets/fonts/quicksand-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../assets/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url('../assets/fonts/MaterialIcons-Regular.woff2') format('woff2'), url('../assets/fonts/MaterialIcons-Regular.woff') format('woff'), url('../assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5em;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+
+/* fonts  */
+
+header .title,
+footer,
+.content {
+    font-family: 'quicksandregular';
+}
+
+button,
+.button {
+    box-shadow: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+}
+
+.btn {
+    margin: 0px;
+    height: 46px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.main-btn {
+    width: 100%;
+    background-color: $mainbtn;
+    color: #fff;
+}
+
+.round-btn {
+    width: 100%;
+    background-color: #ffffff;
+    color: $mainbtn;
+    border: 2px solid $mainbtn;
+}
+
+.alert-btn {
+    font-family: 'quicksandregular';
+    text-transform: uppercase;
+    font-size: 1.40rem;
+    box-shadow: none;
+    width: 90%;
+    color: $mainbtn;
+    border-radius: 30px;
+    border: 2px solid $mainbtn;
+}
+
+.fb-btn {
+    width: 100%;
+    color: #fff;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+ion-navbar,
+ion-navbar .toolbar-background {
+    background: linear-gradient(to right, #bd3f32 0%, #7c193d 100%) !important;
+    background-color: #bd3f32;
+    span,
+    .toolbar-title {
+        font-weight: 300;
+        font-size: 1.7rem;
+        color: #fff;
+    }
+    .bar-button .icon,
+    .material-icons {
+        color: #fff;
+        font-size: 1.6em;
+        padding: 0px 3px;
+    }
+    img {
+        max-width: 3.8vmax;
+        padding: 0px 0.1em;
+    }
+}
+
+.header-md::after {
+    display: none;
+}
+
+.header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border: none;
+}
+
+
+/* ====list design ===*/
+
+.list-md .item-input:last-child,
+.list-ios>.item-block:last-child,
+.list-ios>.item-wrapper:last-child .item-block {
+    border-bottom: 0;
+}
+
+.list-md>.item-block .item-inner,
+.list-ios>.item-block .item-inner {
+    padding-right: 0;
+}
+
+.list-md>.item-block:last-child .item-inner,
+.list-md>.item-wrapper:last-child .item-inner,
+.list-ios>.item-block:last-child .item-inner,
+.list-ios>.item-wrapper:last-child .item-inner,
+{
+    border-bottom: 1px solid #dedede;
+}
+
+.item-md.item-input.item-input-has-focus .item-inner,
+.item-md.item-input.input-has-focus .item-inner {
+    border-bottom-color: #488aff;
+    -webkit-box-shadow: inherit;
+    box-shadow: inherit;
+}
+
+.list-md .item-input.item-input-has-focus:last-child,
+.list-md .item-input.input-has-focus:last-child {
+    border-bottom-color: transparent;
+    -webkit-box-shadow: inherit;
+    box-shadow: inherit;
+}
+
+.list-ios>.item-block:first-child {
+    border-top: 0;
+}
+
+
+/* ====list design ===*/
+
+
+/* =====side bar====== */
+
+ion-menu ion-content .scroll-content::-webkit-scrollbar {
+    display: none;
+}
+
+ion-menu ion-content {
+    background-color: #1f181b;
+}
+
+ion-menu .header::after,
+ion-menu .header-md::after {
+    display: none;
+}
+
+.menu-wrap {
+    background-color: #1f181b;
+    .list-ios>.item-block:last-child,
+    .list-ios>.item-block:first-child {
+        border: none;
+    }
+}
+
+.sidebar {
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #322023;
+    .input-wrapper {
+        height: auto;
+        font-size: 15px;
+    }
+    .profile-wrap {
+        text-align: center;
+        .profilepic-wrap {
+            background-color: transparent;
+            border-radius: 50%;
+            border: 8px solid #7c1a3d;
+        }
+        .img-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0px 9%;
+            .person-pic {
+                border: 4px solid #bd3f32;
+                border-radius: 50%;
+                width: 84px;
+                height: 84px;
+                overflow: hidden;
+                margin: 0 auto;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    margin: auto;
+                    border-radius: 0;
+                    overflow: hidden;
+                }
+            }
+            .icon-wrap {
+                width: 20px;
+                height: 20px;
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    p {
+        color: #b6575a;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    h4 {
+        font-family: 'quicksandlight';
+        display: inline-block;
+        color: #b6575a;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 10px auto 0px;
+        overflow: hidden;
+        padding: 0px 25px;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 210px;
+        min-width: 100px;
+    }
+    h4::before,
+    h4::after {
+        content: " ";
+        width: 15px;
+        height: 1px;
+        background-color: #b6575a;
+        display: block;
+    }
+    h4::before {
+        float: left;
+        position: absolute;
+        top: 10px;
+        margin-left: auto;
+        margin-right: 10px;
+        left: 0;
+    }
+    h4::after {
+        float: right;
+        position: absolute;
+        top: 10px;
+        margin-left: 10px;
+        margin-right: auto;
+        right: 0;
+    }
+    /* .list-ios > .item-block:last-child, .list-ios > .item-block:first-child {
+    border: none;
+} */
+}
+
+.menus {
+    border-top: 1px solid #0f0808;
+    border-bottom: 0;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    .icons {
+        margin: 0px;
+        width: 36px;
+    }
+    ion-icon {
+        margin: 0px;
+        font-size: 1.5em;
+    }
+    ion-item,
+    .item-md,
+    .item-ios {
+        padding-left: 4px;
+        background-color: transparent;
+        transition: background 200ms ease-in-out;
+        .item-inner {
+            border-bottom: 1px solid #292325;
+            background-image: none;
+        }
+    }
+    button.item-ios:not([detail-none]) .item-inner {
+        background-image: none;
+    }
+    .input-wrapper {
+        height: auto;
+        color: #fff;
+        ion-label,
+        .label-ios,
+        .label-md {
+            display: flex;
+            align-items: center;
+            margin: 5px 8px 5px 0;
+            .menu-name {
+                font-family: 'quicksandlight';
+                text-transform: capitalize;
+                font-size: 15px;
+                padding-left: 30px;
+            }
+        }
+    }
+    .active {
+        background-color: #c12d2e;
+        padding-left: 4px;
+        .item-inner {
+            background-color: #180f12;
+        }
+    }
+    .seperator {
+        padding: 5px 20px 5px 30px;
+        background-color: rgba(132, 32, 77, 0.753);
+        margin: 0px 0px;
+        font-size: 13px;
+        color: #b3abab;
+    }
+}
+
+.menus>.item-block:last-child .item-inner,
+.menus>.item-wrapper:last-child .item-inner,
+.menus>.item-block:last-child .item-inner,
+.menus>.item-wrapper:last-child .item-inner,
+{
+    border-bottom: none;
+}
+
+
+/* =====side bar====== */
+
+
+/* Alert Design  */
+
+.alert-wrapper .alert-head {
+    background: linear-gradient(to right, #bd3f32 0%, #7c193d 100%) !important;
+    background-color: #bd3f32;
+    color: #fff !important;
+    padding: 14px 0 !important;
+    text-align: center !important;
+    h2 {
+        margin: 0px !important;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .alert-message {
+        margin-top: 16px;
+        font-size: 17px;
+        color: #505050;
+        text-align: center;
+    }
+}
+
+.alert-md .alert-button-group,
+.alert-button-group {
+    justify-content: space-around;
+    padding: 0px;
+    .minimain-btn {
+        margin: 0px auto 16px;
+        text-align: center;
+        width: 40%;
+        background-color: $mainbtn;
+        border-radius: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: none;
+    }
+    .minisec-btn {
+        margin: 0px auto 16px;
+        text-align: center;
+        width: 40%;
+        background-color: $mainbtn;
+        border-radius: 30px;
+        color: #313131;
+        text-transform: uppercase;
+        box-shadow: none;
+    }
+}
+
+.alert-md .alert-message,
+.alert-ios .alert-message {
+    margin-top: 16px;
+    font-size: 17px;
+    color: #505050;
+    text-align: center;
+}
+
+.alert-ios .alert-message:empty,
+.alert-md .alert-message:empty {
+    display: none;
+}
+
+.alert-ios .alert-button,
+.alert-md .alert-button {
+    background-color: $mainbtn;
+    color: #fff;
+}
+
+.alert-md .alert-button-group {
+    justify-content: space-between;
+    padding: 0px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.alert-md .alert-button .button-inner {
+    justify-content: center;
+}
+
+.alert-md .alert-button {
+    background-color: $mainbtn;
+    color: #fff;
+    width: 49.8%;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+
+/* Alert Design  */

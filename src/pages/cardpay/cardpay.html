@@ -1,0 +1,148 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>Debit/Credit Card</ion-title>
+  </ion-navbar>
+  <div class="filter-wrap">
+    <ion-segment [(ngModel)]="card" color="segcolor">
+      <ion-segment-button value="New-Card">New Card</ion-segment-button>
+      <ion-segment-button value="Saved-Card">Saved Card</ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+
+<ion-content>
+
+
+
+  <div [ngSwitch]="card">
+
+    <div *ngSwitchCase="'New-Card'" ngSelected="selected">
+      <p class="sub-title" text-center margin-top>Enter your card details</p>
+
+      <ion-list margin-top padding-horizontal class="round-box">
+        <ion-item class="card-num  mb-10">
+          <ion-input type="number" placeholder="XXXX-XXXX-XXXX-XXXX"></ion-input>
+          <ion-label class="card-icon">
+            <img src="assets/img/Visa.svg">
+          </ion-label>
+        </ion-item>
+
+
+
+        <ion-item class="mb-10">
+          <ion-input type="text" placeholder="Name On Card"></ion-input>
+        </ion-item>
+        <ion-item float-left class="minibox mb-10">
+          <ion-input type="number" placeholder="02/2017" text-center></ion-input>
+        </ion-item>
+        <ion-item float-right margin-left class="minibox right mb-10">
+          <ion-input type="number" placeholder="CVV" text-center></ion-input>
+        </ion-item>
+
+        <div margin-left class="right">
+
+          <div class="cvv">
+            <img src="assets/img/cvv.png">
+          </div>
+          <div class="tick">
+            <img src="assets/img/done.svg">
+          </div>
+        </div>
+      </ion-list>
+
+      <ion-grid>
+        <ion-row justify-content-center margin-top>
+          <ion-col text-center text-center margin-horizontal>
+            <p text-center class="btn scan-btn">
+              <i class="material-icons">center_focus_weak</i>scan card
+            </p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col text-center margin-horizontal class="term">
+            <ion-item>
+              <ion-label>Save card for future payment</ion-label>
+              <ion-checkbox checked="false"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row justify-content-center>
+          <ion-col text-center margin-horizontal>
+            <button ion-button class="btn main-btn" (click)="gotoHome()">pay</button>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </div>
+
+    <div *ngSwitchCase="'Saved-Card'">
+      <ion-grid class="card-list">
+        <ion-row justify-content-center>
+          <ion-col text-center>
+            <ion-list radio-group text-center class="square-box">
+              <ion-item text-center class="mb-10">
+                <ion-radio item-left></ion-radio>
+                <ion-label class="left">
+                  <div class="logo-wrap">
+                    <img src="assets/img/Visa_Inc._logo.svg" />
+                  </div>
+                  <div class="card-details">
+                    <div class="card-number">6634-3639-XXXX-XXXX</div>
+                    <div class="bank">American Express</div>
+                  </div>
+
+                </ion-label>
+
+                <ion-input type="number">cvv</ion-input>
+              </ion-item>
+
+              <ion-item text-center class="mb-10">
+                <ion-radio item-left></ion-radio>
+                <ion-label class="left">
+                  <div class="logo-wrap">
+                    <img src="assets/img/Visa_Inc._logo.svg" />
+                  </div>
+                  <div class="card-details">
+                    <div class="card-number">6634-3639-XXXX-XXXX</div>
+                    <div class="bank">American Express</div>
+                  </div>
+
+                </ion-label>
+
+                <ion-input type="number">cvv</ion-input>
+              </ion-item>
+
+              <ion-item text-center class="mb-10">
+                <ion-radio item-left></ion-radio>
+                <ion-label class="left">
+                  <div class="logo-wrap">
+                    <img src="assets/img/Visa_Inc._logo.svg" />
+                  </div>
+                  <div class="card-details">
+                    <div class="card-number">6634-3639-XXXX-XXXX</div>
+                    <div class="bank">American Express</div>
+                  </div>
+
+                </ion-label>
+
+                <ion-input type="number">cvv</ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+
+        <ion-row justify-content-center>
+          <ion-col text-center margin-horizontal>
+            <button ion-button class="btn main-btn" (click)="gotoHome()">pay</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

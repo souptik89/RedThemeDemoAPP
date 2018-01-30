@@ -1,0 +1,184 @@
+<ion-header>
+
+  <ion-navbar>
+    <!--  <button ion-button menuToggle>
+           <ion-icon name="menu"></ion-icon>
+         </button> -->
+    <div class="user fixed-content">
+
+      <ion-item class="user_left">
+        <ion-avatar item-left>
+          <img src="assets/img/influ-pic.jpg">
+        </ion-avatar>
+        <p class="grn-text">Hana Fieldds</p>
+        <p class="ph">+454553223</p>
+      </ion-item>
+    </div>
+
+
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="audiocall()">
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="videocall()">
+        <ion-icon name="videocam"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="gotopaycard()">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="chat" no-bounce fullscreen="false">
+
+
+  <div class="messages">
+
+    <div class="message-left">
+      <p>Hi,I am your influencer.</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+    <div class="message-left">
+      <p>Hi,I am your influencer. I am your influencer. I am your influencer.
+      </p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+
+    <div class="message-left">
+      <p>Hi,I am your influencer.</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+    <div class="message-left">
+      <p>Hi,I am your influencer.</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+
+    <div class="message-left">
+      <p>Hi,I am your influencer.</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+    <div class="message-left">
+      <p>Hi,I am your influencer.</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+    <div class="message-right">
+      <p>Yes I booked you for today</p>
+      <span class="date">22.02.2017 03.45pm</span>
+    </div>
+
+
+  </div>
+
+
+</ion-content>
+<ion-footer no-border>
+  <div *ngIf="attch">
+    <div class="attach-ops animation-target">
+      <ion-list class="list-wrap">
+        <p>
+          <i class="material-icons">folder_special</i>Document</p>
+        <p>
+          <i class="material-icons">photo_library</i>Gallery</p>
+        <p>
+          <i class="material-icons">place</i>Location</p>
+      </ion-list>
+    </div>
+  </div>
+  <div class="recorder" *ngIf="recoder_box_show">
+    <div class="col-wrap">
+      <div class="icon-timer">
+        <ion-icon name="mic"></ion-icon>
+        <p>03:30</p>
+      </div>
+      <div class="btn-group">
+        <p text-center>cancel</p>
+        <p text-center>send</p>
+      </div>
+    </div>
+  </div>
+  <ion-toolbar class="msg" color="footer-white">
+    <div class="in">
+      <div class="text-box" *ngIf="!slide">
+        <i class="material-icons" (click)="showattch()">mood</i>
+
+        <ion-textarea [(ngModel)]="val" rows="1" autoresize placeholder="Type a message..." (keyup)="hidecam($event)"></ion-textarea>
+
+        <div class="attch-btns">
+
+          <span class="clip-icon" (click)="showattch()">
+            <img src="assets/img/attachment.svg" />
+          </span>
+          <!--<i class="material-icons" (click)="showattch()">attach_file</i>
+              <i class="material-icons" *ngIf="camicon">camera_alt</i> -->
+          <span (click)="opencamera()" class="cam-icon" *ngIf="camicon">
+            <img src="assets/img/photo-camera.svg" />
+          </span>
+        </div>
+      </div>
+
+      <div class="text-box2" *ngIf="slide">
+        <i class="material-icons" [class.del]="active">delete_sweep</i>
+
+        <p>
+          <span id="timer">10:00</span>
+          <span id="txt">slide to delete</span>
+        </p>
+
+      </div>
+
+    </div>
+    <!-- on keyboard open send button -->
+    <div class="stack" *ngIf="cambutton">
+      <button ion-button end small (click)="sendMessage()" [disabled]="msg === ' '">
+        <i class="material-icons">send</i>
+      </button>
+    </div>
+    <!-- voice message button -->
+    <ul *ngIf="!cambutton" class="stack" swing-stack [stackConfig]="stackConfig" (throwoutleft)="onThrowOut($event)">
+      <li swing-card>
+        <button ion-button end small class="record" [class.big]="btn_active" (press)="recording()" (pressup)="recordfinish()">
+          <i class="material-icons">keyboard_voice</i>
+        </button>
+      </li>
+    </ul>
+
+  </ion-toolbar>
+</ion-footer>

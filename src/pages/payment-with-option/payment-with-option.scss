@@ -1,0 +1,158 @@
+page-payment-with-option {
+    .header-md {
+        ion-navbar {
+            .toolbar-background {
+                background: transparent;
+            }
+        }
+        &:after {
+            background-image: none;
+        }
+    }
+    .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+        border-width: 0;
+    }
+    .back {
+        background: none;
+        width: 25px;
+        height: 23px;
+        padding: 0;
+        float: left;
+        margin: 0;
+        ion-icon {
+            i {
+                font-size: 35px;
+            }
+        }
+    }
+    .scroll-content {
+        background-color: #f4f4f4;
+    }
+    .top_block {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        .row {
+            justify-content: center;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        ion-avatar {
+            min-width: 86px;
+            height: 86px;
+            margin: 0 auto;
+            img {
+                width: 86px;
+                height: 86px;
+                border-radius: 100%;
+                margin: 0 auto;
+            }
+        }
+        h2 {
+            font-size: 17px;
+            color: #565656;
+            width: 100%;
+            text-align: center;
+        }
+        .right_arrow img {
+            width: 30px;
+            margin: 0 auto;
+            display: block;
+            margin-top: 30px;
+        }
+    }
+    .button-box {
+        border-radius: 0;
+        position: absolute;
+        width: 100%;
+        background-color: transparent;
+        height: 62%;
+        top: 36%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0px 16px;
+        .box-wrap {
+            border-radius: 7px;
+            padding-top: 16px;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+            -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+            position: relative;
+
+            .payment_type_icon {position:absolute; width: 100%; bottom: 5px; top: auto; height: 30px; overflow: hidden;        
+                img { margin: 0 auto; display: block;}
+            }
+
+        }
+        .box-heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #565656;
+            text-transform: uppercase;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        h6 {
+            font-size: 11px;
+            text-align: center;
+            color: #be181b;
+            width: 100%;
+            margin-top: 5px;
+            label {
+                color: #ccc;
+                margin-right: 5px;
+            }
+        }
+        hr {
+            background-color: #fcaaaa;
+        }
+        .link {
+            color: #717171;
+            font-size: 15px;
+            font-family: 'quicksandregular';
+            .red {
+                color: $red-text;
+            }
+        }
+        .item-ios,
+        .list-ios>.item-block:last-child,
+        .item-md {
+            border-bottom: 0.55px solid #c8c7cc;
+            .payment_getway_icon {
+                max-width: 73px;
+            }
+        }
+        .item-ios.item-block .item-inner,
+        .list-ios>.item-block:last-child .item-inner,
+        .item-md.item-block .item-inner,
+        .list-md>.item-block:last-child .item-inner {
+            border-bottom: none
+        }
+        .item-ios[detail-push] .item-inner,
+        button.item-ios:not([detail-none]) .item-inner,
+        a.item-ios:not([detail-none]) .item-inner {
+            background-image: url("../assets/img/next.svg");
+        }
+        .item-md[detail-push] .item-inner,
+        button.item-md:not([detail-none]) .item-inner,
+        a.item-md:not([detail-none]) .item-inner {
+            background-image: url("../assets/img/next.svg");
+            padding-right: 32px;
+            background-position: right 14px center;
+            background-position: right calc(14px + constant(safe-area-inset-right)) center;
+            background-position: right calc(14px + env(safe-area-inset-right)) center;
+            background-repeat: no-repeat;
+            background-size: 14px 14px;
+        }
+
+        
+
+
+    }
+}

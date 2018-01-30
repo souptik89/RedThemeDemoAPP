@@ -1,0 +1,100 @@
+<ion-content>
+  <div class="top-wrap">
+    <!-- <div class="bars">
+      <img src="assets/img/bars.png" />
+    </div> -->
+
+    <ion-header>
+      <ion-navbar>
+        <!--  <button ion-button class="back">
+              <ion-icon name="Back">
+                <i class="material-icons">keyboard_arrow_left</i>
+              </ion-icon>
+            </button> -->
+
+        <!-- <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button> -->
+        <ion-title>Edit Profile</ion-title>
+      </ion-navbar>
+    </ion-header>
+
+
+    <div class="Profile_name">Michael Emerson</div>
+    <br>
+
+    <!-- <button ion-button class="close_lock">
+      <img src="assets/img/close_lock.png" />
+    </button> -->
+    <div class="profile_image">
+      <img src="assets/img/profile-pic.jpg" />
+      <button ion-button class="camera">
+        <img src="assets/img/camera.png" />
+      </button>
+    </div>
+    <!-- <button ion-button class="btn edit_profile">
+      <img src="assets/img/edit-profile.png" />
+    </button> -->
+
+  </div>
+
+
+
+  <div class="button-box-two">
+    <div class="box-wrap">
+
+      <ion-row>
+        <ion-col col-5>
+          <label>Name</label>
+        </ion-col>
+        <ion-col col-7>
+          <ion-input type="text" value="Michael Emerson"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-5>
+          <label>Email</label>
+        </ion-col>
+        <ion-col col-7>
+          <ion-input type="mail" value="michael@gmail.com"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-5>
+          <label>Phone No</label>
+        </ion-col>
+        <ion-col col-7>
+          <ion-input type="text" value="45643634734"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-5>
+          <label>BIO</label>
+        </ion-col>
+        <ion-col col-7>
+          <ion-textarea value="I am a bussiness man lives in manhattan.I am a bussiness man lives in manhattan."></ion-textarea>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-5>
+          <label>Company</label>
+        </ion-col>
+        <ion-col col-7>
+          <ion-input type="text" value="Camouflage info pvt ltd"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="mb-10 done_row">
+        <ion-col text-center margin-horizontal>
+          <button ion-button class="btn main-btn" (tap)="backtoprofile()">Done</button>
+        </ion-col>
+      </ion-row>
+
+    </div>
+  </div>
+
+
+</ion-content>

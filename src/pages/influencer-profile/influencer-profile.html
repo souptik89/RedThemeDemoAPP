@@ -1,0 +1,117 @@
+<ion-content>
+  <div class="top-wrap">
+    <!-- <div class="bars">
+        <img src="assets/img/bars.png" />
+      </div> -->
+
+    <ion-header>
+      <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Profile</ion-title>
+      </ion-navbar>
+    </ion-header>
+
+
+    <div class="Profile_name">Michael Emerson</div>
+    <br>
+
+    <button ion-button class="btn close_lock" (tap)="influencerPasswordChange()">
+      <img src="assets/img/closed-lock.svg" />
+    </button>
+    <div class="profile_image">
+      <img src="assets/img/profile-pic.jpg" />
+    </div>
+    <button ion-button class="btn edit_profile" (tap)="influencerEditProfile()">
+      <img src="assets/img/edit.svg" />
+    </button>
+
+  </div>
+
+  <div class="statusbar">
+    <div class="minibox">
+      <div class="icon-wrap">
+        <img src="assets/img/comment-black-oval-bubble-shape.svg" />
+      </div>
+      <p class="count">50</p>
+    </div>
+    <div class="minibox">
+      <div class="icon-wrap">
+        <img src="assets/img/follower.svg" />
+      </div>
+      <p class="count">10k</p>
+    </div>
+    <div class="minibox">
+      <div class="icon-wrap">
+        <img src="assets/img/star.svg" />
+      </div>
+      <p class="count">3.5</p>
+    </div>
+  </div>
+
+  <div class="button-box-two">
+    <div class="box-wrap">
+
+      <ion-row>
+        <ion-col col-5>
+          <label>Name</label>
+        </ion-col>
+        <ion-col col-7>
+          <p>Michael Emerson</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-5>
+          <label>Email</label>
+        </ion-col>
+        <ion-col col-7>
+          <p>michael@gmail.com</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-5>
+          <label>Phone No</label>
+        </ion-col>
+        <ion-col col-7>
+          <p>45643634734</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-5>
+          <label>BIO</label>
+        </ion-col>
+        <ion-col col-7>
+          <p>I am a bussiness man lives in manhattan.I am a bussiness man lives in manhattan.</p>
+        </ion-col>
+      </ion-row>
+
+
+
+    </div>
+  </div>
+  <div class="button-box-3">
+    <ion-row class="mb-20">
+      <ion-col col-7>
+        <label>Preferred Payment</label>
+      </ion-col>
+      <ion-col col-5>
+        <p class="price">$85</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row justify-content-center>
+      <ion-col text-center margin-horizontal>
+        <button ion-button clear class="btn insta-btn" (click)="gotoHome()">Instagram Account
+          <img src="assets/img/instagram.svg" />
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+
+</ion-content>

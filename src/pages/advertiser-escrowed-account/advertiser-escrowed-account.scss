@@ -1,0 +1,60 @@
+page-advertiser-escrowed-account {
+    .back {
+        background: none;
+        width: 25px;
+        height: 23px;
+        padding: 0;
+        float: left;
+        margin: 0;
+        ion-icon {
+            i {
+                font-size: 35px;
+            }
+        }
+    }
+    ion-list {
+        margin-bottom: 10px !important;
+        ion-item {
+            padding-left: 0 !important;
+            margin-bottom: 5px !important;
+            .item-inner {
+                border: 1px solid #dbb7bf !important;
+                border-radius: 3px;
+                .label-md,
+                .label-ios {
+                    margin: 6px;
+                    ion-grid {
+                        padding: 0;
+                        .row {
+                            margin-bottom: 2px;
+                            .col {
+                                padding: 0;
+                                color: #be181b;
+                                label {
+                                    font-size: 15px;
+                                    color: #8a8989;
+                                    padding-right: 5px;
+                                    &.id_label {
+                                        text-transform: uppercase;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .release {
+                        color: #fff;
+                        text-transform: uppercase;
+                        float: right;
+                        background: #7c193d;
+                        display: inline-block;
+                        width: auto;
+                        border-radius: 0;
+                        margin: 0;
+                        padding: 3px 15px;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,166 @@
+page-influencer-profile {
+    .scroll-content {
+        background-color: #fff;
+    }
+    .top-wrap {
+        background: linear-gradient(to right, #bd3f32 0%, #7c193d 100%) !important;
+        background-color: #bd3f32;
+        height: 25%;
+        position: relative;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        .header-md {
+            ion-navbar {
+                .toolbar-background {
+                    background: transparent;
+                }
+            }
+            &:after {
+                background-image: none;
+            }
+        }
+        .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+            border-width: 0;
+        }
+        .Profile_name {
+            color: #fff;
+            font-size: 16px;
+            font-family: 'quicksandregular';
+            margin-top: 20%;
+            float: left;
+            width: 100%;
+            text-align: center;
+            line-height: 20px;
+            text-transform: uppercase;
+        }
+        .profile_image {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            border: 2px solid #7c1a3d;
+            /*-moz-border-image: -moz-linear-gradient(left, #7c1a3d 0%, #bc3f32 100%);
+    -webkit-border-image: -webkit-linear-gradient(left, #7c1a3d 0%, #bc3f32 100%);
+    border-image: linear-gradient(to right, #7c1a3d 0%, #bc3f32 100%);
+    border-image-slice: 1;*/
+            position: absolute;
+            left: 50%;
+            margin-left: -50px;
+            bottom: -50px;
+            overflow: hidden;
+        }
+        .close_lock {
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            position: absolute;
+            left: 40px;
+            bottom: 15px;
+            background: none;
+            border-radius: 100%;
+            padding: 0;
+            border: 1px solid #fa9b92;
+            span {
+                padding: 8px;
+            }
+        }
+        .close_lock img {
+            max-width: 100%;
+            height: auto;
+        }
+        .edit_profile {
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            position: absolute;
+            right: 40px;
+            bottom: 15px;
+            background: none;
+            border-radius: 100%;
+            padding: 0;
+            border: 1px solid #fa9b92;
+            span {
+                padding: 8px;
+            }
+        }
+        .edit_profile img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .statusbar {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, #bd3f32 0%, #7c193d 100%) !important;
+        background-color: #bd3f32;
+        .minibox {
+            width: 33.3%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            color: #fff;
+            padding: 5px 0px;
+            p {
+                margin: 1px auto;
+            }
+            .icon-wrap {
+                width: 15px;
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        .minibox:nth-child(2) {
+            border-left: 1px solid#d77678;
+            border-right: 1px solid#d77678;
+        }
+    }
+    .button-box-two {
+        width: 100%;
+        padding: 0px 16px;
+        margin-top: 10px;
+        .box-wrap {
+            .row {
+                border-bottom: 1px solid #dbb7bf;
+                padding: 6px 0;
+                label {
+                    color: #be181b;
+                    font-size: 15px;
+                    padding-left: 15px;
+                }
+                p {
+                    margin: 0;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+    .button-box-3 {
+        padding: 16px;
+        label {
+            color: #505050;
+            font-size: 1.6rem;
+        }
+        .price {
+            color: $red-text;
+            margin: 0px;
+            font-size: 1.6rem;
+        }
+    }
+    .insta-btn {
+        border: 1px solid $mainbtn;
+        color: $mainbtn;
+        font-size: 1.3rem;
+        height: 36px;
+        span {
+            align-items: center;
+        }
+        img {
+            max-width: 24px;
+            margin-left: 5px;
+        }
+    }
+}
