@@ -3,31 +3,39 @@ page-cardpay {
         background: linear-gradient(to right, #bd3f32 0%, #7c193d 100%) !important;
         background-color: #bd3f32;
     }
-    .sub-title {
-        color: #727272;
-        margin-top: 0;
-        font-size: 1.60rem;
-        position: relative;
+    .tite-head {
+        text-align: center; margin: 20px 0;
+        .sub-title {
+            color: #727272;
+            margin-top: 0;
+            font-size: 1.60rem;
+            position: relative;
+            display: inline-block;
+            &:before {
+                left: -60px;
+                margin-left: 15px;
+                width: 40px;
+                height: 1px;
+                background-color: #727272;
+                display: block;
+                position: absolute;
+                top: 49%;
+                content: " ";
+            }
+            &:after {
+                right: -60px;
+                margin-right: 15px;
+                width: 40px;
+                height: 1px;
+                background-color: #727272;
+                display: block;
+                position: absolute;
+                top: 49%;
+                content: " ";
+            }
+        }
     }
-    .sub-title::before,
-    .sub-title::after {
-        content: " ";
-        width: 40px;
-        height: 1px;
-        background-color: #727272;
-        display: block;
-        position: absolute;
-        top: 49%;
-    }
-    .sub-title::before {
-        left: 0px;
-        margin-left: 15px;
-    }
-    .sub-title::after {
-        right: 0px;
-        margin-right: 15px;
-    }
-    .round-box {
+    .round-box { max-width: 700px; margin: 0 auto;
         .item-block {
             padding: 0px 0px;
             .item-inner {
@@ -45,6 +53,9 @@ page-cardpay {
             }
         }
     }
+
+    ion-grid.new_card_entry{ max-width: 700px; }
+
     .card-num {
         .input-wrapper {
             flex-direction: row-reverse;
@@ -87,11 +98,13 @@ page-cardpay {
         color: #505050;
         border: 2px solid $mainbtn;
         text-align: center;
+        max-width: 300px;
+        margin: 0 auto;
         i {
             margin-right: 10px;
         }
     }
-    .term {
+    .term { max-width: 300px; margin: 0 auto !important;
         .item-block .item-inner {
             border: none;
             font-size: 12px;
@@ -188,6 +201,11 @@ page-cardpay {
         opacity: 1;
         text-transform: capitalize;
         border-radius: 50px;
+        &:hover, &:active{background-color: #b51318;
+            border: 1px solid hsla(0, 5%, 96%, 0);
+            color: #fff;
+            font-size: 1.4rem;
+            border-radius: 40px !important;}
     }
     .segment-md .segment-button.activated,
     .segment-md .segment-button.segment-activated,

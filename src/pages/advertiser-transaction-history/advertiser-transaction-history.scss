@@ -26,7 +26,7 @@ page-advertiser-transaction-history {
                     ion-grid {
                         padding: 0;
                         .row {
-                            margin-bottom: 5px;
+                            margin-top: 5px; margin-bottom: 5px;
                             .col {
                                 padding: 0;
                                 color: #be181b;
@@ -41,12 +41,13 @@ page-advertiser-transaction-history {
                                 }
                             }
                             &.amount_block {
-                                height: 100%;
+                                height: 100%; margin: 0;
                                 .col {
                                     font-size: 18px;
-                                    justify-content: center;
+                                    justify-content:flex-end;
                                     align-items: center;
                                     display: flex;
+
                                 }
                             }
                         }

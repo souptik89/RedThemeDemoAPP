@@ -5,7 +5,7 @@ page-advertiser-profile {
     .top-wrap {
         background: linear-gradient(to right, #bd3f32 0%, #7c193d 100%) !important;
         background-color: #bd3f32;
-        height: 25%;
+        height: 16rem;
         position: relative;
         display: flex;
         align-items: start;
@@ -27,11 +27,10 @@ page-advertiser-profile {
             color: #fff;
             font-size: 16px;
             font-family: 'quicksandregular';
-            margin-top: 20%;
-            float: left;
+            margin-top: 75px;            
             width: 100%;
             text-align: center;
-            line-height: 20px;
+            line-height: 28px;
             text-transform: uppercase;
         }
         .profile_image {

@@ -29,8 +29,7 @@ page-payment-with-option {
         background-color: #f4f4f4;
     }
     .top_block {
-        margin-top: 50px;
-        margin-bottom: 30px;
+        max-width: 450px; margin: 50px auto 30px;
         .row {
             justify-content: center;
             flex-wrap: wrap;
@@ -80,8 +79,9 @@ page-payment-with-option {
             -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
             position: relative;
+            .wrapper { max-width: 700px; margin: 0 auto;}
 
-            .payment_type_icon {position:absolute; width: 100%; bottom: 5px; top: auto; height: 30px; overflow: hidden;        
+            .payment_type_icon {position:absolute; width: 100%; bottom: 5px; left: 0; top: auto; height: 30px; overflow: hidden;        
                 img { margin: 0 auto; display: block;}
             }
 

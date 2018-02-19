@@ -5,7 +5,7 @@ page-influencer-profile-edit {
     .top-wrap {
         background: linear-gradient(to right, #bd3f32 0%, #7c193d 100%) !important;
         background-color: #bd3f32;
-        height: 25%;
+        height: 16rem;
         position: relative;
         display: flex;
         align-items: start;
@@ -27,11 +27,10 @@ page-influencer-profile-edit {
             color: #fff;
             font-size: 16px;
             font-family: 'quicksandregular';
-            margin-top: 20%;
-            float: left;
+            margin-top: 75px;
             width: 100%;
             text-align: center;
-            line-height: 20px;
+            line-height: 28px;
             text-transform: uppercase;
         }
         .profile_image {
@@ -124,7 +123,7 @@ page-influencer-profile-edit {
             justify-content: center;
             font-size: 17px;
             color: #fff;
-            padding: 5px 0px;
+            margin: 5px 0px;
             p {
                 margin: 1px auto;
             }
@@ -143,7 +142,7 @@ page-influencer-profile-edit {
     .button-box-two {
         width: 100%;
         padding: 0px 16px;
-        margin-top: 10px;
+        margin-top: 16px;
         .box-wrap {
             .row {
                 border-bottom: 1px solid #dbb7bf;
@@ -198,9 +197,19 @@ page-influencer-profile-edit {
             font-size: 1.6rem;
             display: flex;
             align-items: center;
+            position: relative;
+            &:before {
+                content: "$";
+                width: 5px;
+                height: 10px;
+                left: 10px;
+                top: 6px;
+                position: absolute;
+            }
             .text-input {
-                margin: 0px 5px;
+                margin: 0px;
                 border-bottom: 1px solid #ccc;
+                padding-left: 20px
             }
         }
     }

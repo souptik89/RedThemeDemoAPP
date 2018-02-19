@@ -5,7 +5,7 @@ page-advertiser-registration {
     .logo-wrap {
         background: linear-gradient(to right, #e52d27 0%, #b31217 100%) !important;
         background-color: #e52d27;
-        height: 45%;
+        height: 45vh;
         position: relative;
         display: flex;
         align-items: start;
@@ -21,10 +21,11 @@ page-advertiser-registration {
             }
         }
         .logo {
-            width: 70%;
+            width: 64%;
+            max-width: 300px;
             text-align: center;
             display: block;
-            margin: 25px auto 20px;
+            margin: 5vh auto 20px;
             img {
                 max-width: 100%;
             }
@@ -35,16 +36,21 @@ page-advertiser-registration {
         position: absolute;
         width: 100%;
         background-color: transparent;
-        height: auto;
-        top: 17%;
+        height: 87vh;
+        top: 17vh;
         left: 50%;
         transform: translateX(-50%);
         padding: 0px 16px;
         margin-bottom: 16px;
         .box-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             border-radius: 7px;
             padding-top: 16px;
+            padding-bottom: 5px;
             width: 100%;
+            min-height: 48rem;
             height: 100%;
             background-color: #fff;
             -webkit-box-shadow: 0px 0px 8px 1px rgba(190, 24, 27, 0.5);
@@ -81,17 +87,21 @@ page-advertiser-registration {
     .list-ios {
         margin: -1px 0 16px;
     }
-    .item-label-floating .input-wrapper .input {
-        padding-right: 30px;
-        margin-right: 0;
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 9px;
-            right: 0;
-            width: 25px;
-            height: 20px;
+    .item-label-floating {
+        max-width: 700px;
+        margin: 0 auto;
+        .input-wrapper .input {
+            padding-right: 30px;
+            margin-right: 0;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 9px;
+                right: 0;
+                width: 25px;
+                height: 20px;
+            }
         }
     }
     .item-label-floating .input-wrapper .input[type="text"] {

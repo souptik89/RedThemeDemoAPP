@@ -19,16 +19,20 @@ page-home {
         flex-wrap: wrap;
         align-items: center;
         margin: 10px 6px;
-        justify-content: flex-start;
+        justify-content: center;
+        max-width: 700px;
+        margin: 0 auto;
         ion-card {
-            width: 47%;
+            width: 46%;            
+            max-width: 223px;
             height: 47%;
-            margin: 1.5%;
+            margin: 5px;
             position: relative;
             overflow: hidden;
             border-radius: 3px;
             background-color: rgba(255, 255, 255, 0.20);
             border: 1px solid rgba(255, 255, 255, 0.20);
+
         }
         .thumbnail {
             position: relative;
@@ -121,6 +125,11 @@ page-home {
         opacity: 1;
         text-transform: capitalize;
         border-radius: 50px;
+        &:active, &:hover {background-color: #b51318;
+            border: 1px solid hsla(0, 5%, 96%, 0);
+            color: #fff;
+            font-size: 1.4rem;
+            border-radius: 40px !important;}
     }
     .segment-md .segment-button.activated,
     .segment-md .segment-button.segment-activated,

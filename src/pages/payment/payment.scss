@@ -36,7 +36,7 @@ page-payment {
         background-color: #f4f4f4;
     }
 
-    .top_block { margin-top: 50px; margin-bottom: 30px;
+    .top_block { max-width: 450px;  margin:5rem auto 2rem;
         .row { justify-content: center; flex-wrap: wrap; display: flex; }
 
         ion-avatar { min-width:86px; height: 86px; margin: 0 auto;
@@ -50,23 +50,30 @@ page-payment {
 
     .button-box {
         border-radius: 0;
-        position: absolute;
         width: 100%;
         background-color: transparent;
-        height: 62%;
-        top: 36%;
-        left: 50%;
-        transform: translateX(-50%);
+        min-height: 32rem;
         padding: 0px 16px;
+        margin-bottom: 16px;
         .box-wrap {
             border-radius: 7px;
             padding-top: 16px;
             width: 100%;
-            height: 100%;
+            min-height: 32rem;
             background-color: #fff;
             -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
             -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+           
+        }
+        .wrapper { max-width: 700px; margin: 0 auto;}
+.options {
+    position: relative;
+    min-height: 25rem;
+   padding-bottom: 46px;
+}
+        .payment_type_icon { width: 100%;position: absolute; bottom: 5px; left: 0; top: auto; height: 30px; overflow: hidden;        
+            img { margin: 0 auto; display: block;}
         }
         .box-heading {
             display: flex;
@@ -77,14 +84,20 @@ page-payment {
             font-weight: 600;
             color: #565656;
             text-transform: uppercase;
-            margin-top: 50px;
+            margin-top: 3rem;
             margin-bottom: 10px;
+           
+
         }
 
         h6 { font-size: 11px; text-align: center; color: #be181b; width: 100%; margin-top: 5px;
             label { color: #ccc; margin-right: 5px; }
         }
-
+        hr {
+            background-color: #fcaaaa;
+            width: 100%;
+            margin-bottom: 0px; 
+        }
         .link {
             color: #717171;
             font-size: 15px;
@@ -93,6 +106,41 @@ page-payment {
                 color: $red-text;
             }
         }
+        .list,.list-md,.list-ios {
+            margin:0px auto 16px;
+            width: 100%;
+        }
+        .item-ios,
+        .list-ios>.item-block:last-child,
+        .item-md {
+            border-bottom: 0.55px solid #c8c7cc;
+            .payment_getway_icon {
+                max-width: 66px;
+            }
+        }
+        .item-ios.item-block .item-inner,
+        .list-ios>.item-block:last-child .item-inner,
+        .item-md.item-block .item-inner,
+        .list-md>.item-block:last-child .item-inner {
+            border-bottom: none
+        }
+        .item-ios[detail-push] .item-inner,
+        button.item-ios:not([detail-none]) .item-inner,
+        a.item-ios:not([detail-none]) .item-inner {
+            background-image: url("../assets/img/next.svg");
+        }
+        .item-md[detail-push] .item-inner,
+        button.item-md:not([detail-none]) .item-inner,
+        a.item-md:not([detail-none]) .item-inner {
+            background-image: url("../assets/img/next.svg");
+            padding-right: 32px;
+            background-position: right 14px center;
+            background-position: right calc(14px + constant(safe-area-inset-right)) center;
+            background-position: right calc(14px + env(safe-area-inset-right)) center;
+            background-repeat: no-repeat;
+            background-size: 14px 14px;
+        }
+
     }
 
     .instagram_login { margin-top: 40px;

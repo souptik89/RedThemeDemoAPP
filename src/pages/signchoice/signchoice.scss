@@ -5,7 +5,7 @@ page-signchoice {
     .logo-wrap {
         background: linear-gradient(to right, #e52d27 0%, #b31217 100%) !important;
         background-color: #e52d27;
-        height: 45%;
+        height: 45vh;
         position: relative;
         display: flex;
         align-items: center;
@@ -14,13 +14,14 @@ page-signchoice {
             position: absolute;
             top: 0px;
             right: 2%;
-            width: 42%;
+            width: 22%;
             img {
                 max-width: 100%;
             }
         }
         .logo {
             width: 70%;
+            max-width: 300px;
             text-align: center;
             display: block;
             margin: 0px auto 20px;
@@ -34,15 +35,20 @@ page-signchoice {
         position: absolute;
         width: 100%;
         background-color: transparent;
-        height: 62%;
-        top: 36%;
+        height: 62vh;
+        top: 36vh;
         left: 50%;
         transform: translateX(-50%);
         padding: 0px 16px;
         .box-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             border-radius: 7px;
             padding-top: 16px;
+            padding-bottom: 5px;
             width: 100%;
+            min-height: 32rem;
             height: 100%;
             background-color: #fff;
             -webkit-box-shadow: 0px 0px 8px 1px rgba(190, 24, 27, 0.5);

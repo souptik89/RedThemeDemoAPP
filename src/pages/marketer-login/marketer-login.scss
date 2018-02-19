@@ -5,7 +5,7 @@ page-marketer-login {
     .logo-wrap {
         background: linear-gradient(to right, #e52d27 0%, #b31217 100%) !important;
         background-color: #e52d27;
-        height: 45%;
+        height: 45vh;
         position: relative;
         display: flex;
         align-items: center;
@@ -14,13 +14,14 @@ page-marketer-login {
             position: absolute;
             top: 0px;
             right: 2%;
-            width: 42%;
+            width: 22%;
             img {
                 max-width: 100%;
             }
         }
         .logo {
             width: 70%;
+            max-width: 300px;
             text-align: center;
             display: block;
             margin: 0px auto 20px;
@@ -34,16 +35,21 @@ page-marketer-login {
         position: absolute;
         width: 100%;
         background-color: transparent;
-        height: auto;
-        top: 36%;
+        height: 62vh;
+        top: 36vh;
         left: 50%;
         transform: translateX(-50%);
         padding: 0px 16px;
         margin-bottom: 16px;
         .box-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             border-radius: 7px;
             padding-top: 16px;
+            padding-bottom: 5px;
             width: 100%;
+            min-height: 32rem;
             height: 100%;
             background-color: #fff;
             -webkit-box-shadow: 0px 0px 8px 1px rgba(190, 24, 27, 0.5);
@@ -82,17 +88,21 @@ page-marketer-login {
     .item-ios {
         padding-right: 16px;
     }
-    .item-label-floating .input-wrapper .input {
-        padding-right: 30px;
-        margin-right: 0;
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 9px;
-            right: 0;
-            width: 25px;
-            height: 20px;
+    .item-label-floating {
+        max-width: 700px;
+        margin: 0 auto;
+        .input-wrapper .input {
+            padding-right: 30px;
+            margin-right: 0;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 9px;
+                right: 0;
+                width: 25px;
+                height: 20px;
+            }
         }
     }
     .item-label-floating .input-wrapper .input[type="text"] {
@@ -115,15 +125,22 @@ page-marketer-login {
             border-left: 1px solid #cb2e31;
         }
     }
-    .forgot_pass {
-        padding: 5px;
-        color: #cb2e31;
-        font-size: 14px;
-        margin: 0px 0px;
-        font-family: 'quicksandregular';
-        font-weight: 600;
-    }
-    .forgot_pass:focus {
-        background: none;
+    .forfot_pass_row {
+        width: 100%;
+        max-width: 700px;
+        padding: 0 16px;
+        margin: 0 auto;
+        .forgot_pass {
+            padding: 5px;
+            color: #cb2e31;
+            font-size: 14px;
+            margin: 0px 0px;
+            font-family: 'quicksandregular';
+            font-weight: 600;
+            float: right;
+            &:focus {
+                background: none;
+            }
+        }
     }
 }

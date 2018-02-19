@@ -49,14 +49,12 @@ page-promot-list {
                                     text-transform: uppercase;
                                 }
                             }
-                        }
-                        &.amount_block {
-                            height: 100%;
-                            .col {
-                                font-size: 18px;
-                                justify-content: center;
-                                align-items: center;
-                                display: flex;
+                            
+                            .amount_block {
+                                height: 100%; align-items: center; display: flex; justify-content: flex-end;
+                                img {
+                                    max-height: 50px;
+                                }
                             }
                         }
                     }

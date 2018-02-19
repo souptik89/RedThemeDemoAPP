@@ -37,17 +37,33 @@
   </div>
   <div class="button-box">
     <div class="box-wrap">
-      <p class="box-heading"> Required Payment $85</p>
-      <h6>
-        <label>Escrowed</label> ID: 45756288187</h6>
 
-      <ion-grid>
-        <ion-row class="mb-10">
-          <ion-col text-center margin-horizontal>
-            <button ion-button class="btn main-btn instagram_login" (tap)="options()">PAY</button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+        <p class="box-heading"> Required Payment $85</p>
+        <h6>
+          <label>Escrowed</label> ID: 45756288187</h6>
+
+        <ion-grid *ngIf="!showoptions" >
+          <ion-row class="mb-10">
+            <ion-col text-center margin-horizontal>
+              <button ion-button class="btn main-btn instagram_login" (tap)="options()">PAY</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="options" *ngIf="showoptions">
+          <hr>
+
+          <ion-list>
+            <button ion-item *ngFor="let item of items" (tap)="cardpay()">
+              <img [src]=" item.headimageUrl" class="payment_getway_icon">
+            </button>
+          </ion-list>
+    
+    
+          <div class="payment_type_icon">
+            <img src="assets/img/payment_type_icon.png">
+          </div>
+        </div>
+
     </div>
   </div>
 
